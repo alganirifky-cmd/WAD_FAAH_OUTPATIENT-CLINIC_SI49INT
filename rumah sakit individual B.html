@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Pengisian Form Data Dokter</title>
+
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Klinik Sehat informasi sistem</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Data Dokter</a>
+            <a href="#">Data Pasien</a>
+            <a href="#">Jadwal Praktik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Form Data Dokter</h1>
+        <p>Isi data master dokter, nomor SIP (Surat Izin Praktik), spesialisasi, dan kontak.</p>
+
+        <form action="" method="POST">
+            
+            <h3>1. Identitas Dokter</h3>
+
+            <p>
+                Kode Dokter *<br>
+                <input type="text" name="kode_dokter" placeholder="Dr.001" required>
+            </p>
+
+            <p>
+                Nama Lengkap *<br>
+                <input type="text" name="nama_lengkap" placeholder="Nama tanpa gelar" required>
+            </p>
+
+            <p>
+                Gelar<br>
+                <input type="text" name="gelar" placeholder="Gelar">
+            </p>
+
+            <p>
+                Jenis Kelamin *<br>
+                <input type="radio" id="jk_l" name="jenis_kelamin" value="Laki-laki" required>
+                <label for="jk_l">Laki-laki</label>
+                <input type="radio" id="jk_p" name="jenis_kelamin" value="Perempuan">
+                <label for="jk_p">Perempuan</label>
+            </p>
+
+            <hr>
+
+            <h3>2. Izin Praktik & Spesialisasi</h3>
+
+            <p>
+                No. SIP *<br>
+                <input type="text" name="sip" placeholder="No. SIP" required>
+            </p>
+
+            <p>
+                Spesialisasi *<br>
+                <select name="spesialisasi" required>
+                    <option value="">-- Pilih Spesialisasi --</option>
+                    <option value="Spesialis Anak">Spesialis Anak</option>
+                    <option value="Spesialis Kulit">Spesialis Kulit</option>
+                </select>
+            </p>
+
+            <p>
+                Hari Praktik<br>
+                <input type="checkbox" name="hari_praktik" value="Senin"> Senin
+                <input type="checkbox" name="hari_praktik" value="Selasa"> Selasa
+                <input type="checkbox" name="hari_praktik" value="Rabu"> Rabu
+                <input type="checkbox" name="hari_praktik" value="Kamis"> Kamis             
+                <input type="checkbox" name="hari_praktik" value="Jumat"> Jumat
+                <input type="checkbox" name="hari_praktik" value="Sabtu"> Sabtu
+
+            </p>
+
+            <hr>
+
+            <h3>3. Kontak dan Status</h3>
+
+            <p>
+                Email<br>
+                <input type="email" name="email" placeholder="name@gmail.com">
+            </p>
+
+            <p>
+                No. Telepon / HP *<br>
+                <input type="text" name="telepon" placeholder="No.Telepon" required>
+            </p>
+
+            <p>
+                <button type="reset">Reset</button>
+                <button type="submit">Simpan Dokter</button>
+            </p>
+
+        </form>
+    </div>
+
+</body>
+</html>
